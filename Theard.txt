@@ -5,4 +5,8 @@ New Triis
 New Triis
 New Triis
 
+<<<<<<< HEAD
 New Triss
+=======
+Hate2
+>>>>>>> TestAnim
