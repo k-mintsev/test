@@ -28,7 +28,7 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 	virtual void NotifyHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 	// End AActor overrides
-
+	
 protected:
 
 	// Begin APawn overrides
@@ -43,6 +43,10 @@ protected:
 
 	/** Bound to the horizontal axis */
 	void MoveRightInput(float Val);
+	
+	/** Current forward speed */
+	UPROPERTY(BlueprintReadOnly)
+	float CurrentForwardSpeed;
 
 private:
 
@@ -61,9 +65,6 @@ private:
 	/** Min forward speed */
 	UPROPERTY(Category=Yaw, EditAnywhere)
 	float MinSpeed;
-
-	/** Current forward speed */
-	float CurrentForwardSpeed;
 
 	/** Current yaw speed */
 	float CurrentYawSpeed;
